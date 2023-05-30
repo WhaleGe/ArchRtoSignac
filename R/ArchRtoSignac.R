@@ -1,4 +1,3 @@
-@@ -1,26 +1,3 @@
 #' loadinglibrary
 #'
 #' This function is a quick way to check if the required packages for ArchRtoSignac package are installed. If the packages are available, they are loaded automatically.
