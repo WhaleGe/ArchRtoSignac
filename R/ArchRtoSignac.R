@@ -1,3 +1,27 @@
+@@ -1,26 +1,3 @@
+#' loadinglibrary
+#'
+#' This function is a quick way to check if the required packages for ArchRtoSignac package are installed. If the packages are available, they are loaded automatically.
+#'
+#' @param packages Vector of libraries required for ArchRtoSignac (most dependencies should be installed when installing ArchRtoSignac)
+#' @export
+#' @examples
+#' loadinglibrary(dependencies)
+loadinglibrary <- function(
+  packages
+) {
+  for (i in 1:length(packages)) {
+    loading_package <- packages[i]
+    if (!require(loading_package, character.only = TRUE)) {
+      print(paste("Package", loading_package, 'not found. Please Install the Package!!'))
+    }
+    else {
+      print(paste0("Loading Package: ", loading_package))
+      suppressPackageStartupMessages(library(loading_package, character.only = TRUE))
+      print(paste0("Package: ", loading_package, " -- Loaded Successfully"))
+    }
+  }
+}
 
 #' getPeakMatrix
 #'
